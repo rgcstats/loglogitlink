@@ -4,14 +4,15 @@
 \alias{pvalue.cutover}
 \title{Test null hypothesis that cutover is equal to a particular value}
 \usage{
-pvalue.cutover(cutover, formula, data, stop = F)
+pvalue.cutover(cutover, formula, ..., stop = F)
 }
 \arguments{
 \item{cutover}{The hypothesised value of the cutover}
 
 \item{formula}{The regression formula, see help(glm).}
 
-\item{data}{A data frame containing the data to be analysed.}
+\item{...}{Arguments to pass to optim.cutover and glm2, would typically consist of data, 
+a data frame containing the data to be analysed.}
 
 \item{stop}{Set to TRUE to open a browser window for debugging.}
 }

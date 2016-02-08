@@ -4,14 +4,13 @@
 \alias{optim.cutover}
 \title{Maximum likelihood estimator (MLE) of the cutover}
 \usage{
-optim.cutover(formula, data, ..., stop = F)
+optim.cutover(formula, ..., stop = F)
 }
 \arguments{
 \item{formula}{The regression formula, see help(glm).}
 
-\item{data}{A data frame containing the data to be analysed.}
-
-\item{...}{additional named arguments to be passed to optimize}
+\item{...}{additional named arguments to be passed to optimize or to aic.cutover, typically including data
+(which would be the data.frame containing the data to be analysed).}
 
 \item{stop}{Set to TRUE to open a browser window for debugging.}
 }

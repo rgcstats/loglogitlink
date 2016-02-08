@@ -4,14 +4,14 @@
 \alias{aic.cutover}
 \title{The AIC for a given generalized linear model with log-logit link.}
 \usage{
-aic.cutover(cutover, formula, data, stop = F)
+aic.cutover(cutover, formula, ..., stop = F)
 }
 \arguments{
 \item{cutover}{The cutover.}
 
 \item{formula}{The regression formula, see help(glm).}
 
-\item{data}{A data frame containing the data to be analysed.}
+\item{...}{Other arguments to pass to glm2 (e.g. data).}
 
 \item{stop}{Set to TRUE to open a browser window for debugging.}
 }

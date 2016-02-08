@@ -10,15 +10,15 @@
 #' consistent with the data but not the MLE.
 #' 
 #' @param formula The regression formula, see help(glm).
-#' @param data A data frame containing the data to be analysed.
 #' @param stop Set to TRUE to open a browser window for debugging.
-#' @param ... additional named arguments to be passed to optimize
+#' @param ... additional named arguments to be passed to optimize or to aic.cutover, typically including data
+#'            (which would be the data.frame containing the data to be analysed).
 #' @return The MLE of the cutover.
 #' @examples
 #' optim.cutover(y~x1+x2 , data=loglogit.example)
 #' @export
-optim.cutover <- function(formula,data,...,stop=F){
+optim.cutover <- function(formula,...,stop=F){
   if(stop) browser()
-  optresults <- optimise(f=aic.cutover,interval=c(0,0.999),formula=formula,data=data,...)
+  optresults <- optimise(f=aic.cutover,interval=c(0,0.999),formula=formula,...)
   optresults
 }
