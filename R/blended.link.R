@@ -21,12 +21,10 @@
 #' @param link2 Character string indicating the link function to be used above the cutover
 #' @param cutover The link function switches smoothly from link1 to link2
 #' @return An object of class "link-glm", with link name "blended".
-#' @import glm2
 #' 
 #' @import stats
 #' @examples
-#' library(glm2)
-#' example.binary.regression <- glm2(y~x1+x2 , data=loglogit.example,
+#' example.binary.regression <- glm(y~x1+x2 , data=loglogit.example,
 #'     family = binomial(link=blendedLink("log","logit",0.8)))
 #' summary(example.binary.regression)
 #' @export

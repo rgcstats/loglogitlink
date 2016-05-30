@@ -2,5 +2,4 @@
 
 export(blendedLink)
 export(pvalue.cutover)
-import(glm2)
 import(stats)

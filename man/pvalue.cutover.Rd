@@ -8,6 +8,11 @@ a specific value}
 pvalue.cutover(data, formula, link1, link2, cutover0)
 }
 \arguments{
+\item{data}{a data frame containing the variables in the model.}
+
+\item{formula}{an object of class formula, a symbolic description of the model to be fitted,
+see help(glm)}
+
 \item{link1}{Character string indicating the link function to be used up to the cutover}
 
 \item{link2}{Character string indicating the link function to be used above the cutover}
@@ -28,7 +33,6 @@ Binary regression is assumed. Not suitable when the null value is on
  the boundary (i.e. when cutover0 is 0 or 1).
 }
 \examples{
-library(glm2)
 pvalue.cutover(y~x1+x2 , data=loglogit.example,link1="log",link2="logit",
 cutover0=0.8)
 }

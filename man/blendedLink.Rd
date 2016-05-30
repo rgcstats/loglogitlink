@@ -36,8 +36,7 @@ The function is not normally called directly. Instead, glm or glm2 should be
 used (preferably the latter to avoid fitting problems), as per the example below.
 }
 \examples{
-library(glm2)
-example.binary.regression <- glm2(y~x1+x2 , data=loglogit.example,
+example.binary.regression <- glm(y~x1+x2 , data=loglogit.example,
     family = binomial(link=blendedLink("log","logit",0.8)))
 summary(example.binary.regression)
 }
